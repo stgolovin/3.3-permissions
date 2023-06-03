@@ -2,6 +2,9 @@
 
 @baseUrl = http://localhost:8000/api
 
+# admin - cb2821b95271cfa7d0157462f4c16c7bfa0de1bc
+# user1 - 42cd919a1c27ff546f2b38d90197662b994d5d1d
+
 # получение объявлений
 GET {{baseUrl}}/advertisements/
 Content-Type: application/json
@@ -12,7 +15,7 @@ Content-Type: application/json
 # создание объявления
 POST {{baseUrl}}/advertisements/
 Content-Type: application/json
-Authorization: Token cb2821b95271cfa7d0157462f4c16c7bfa0de1bc
+Authorization: Token 42cd919a1c27ff546f2b38d90197662b994d5d1d
 
 {
   "title": "Шкаф IKEA",
@@ -26,7 +29,7 @@ Authorization: Token cb2821b95271cfa7d0157462f4c16c7bfa0de1bc
 ###
 
 # попытка поменять объявление
-PATCH {{baseUrl}}/advertisements/15/
+PATCH {{baseUrl}}/advertisements/26/
 Content-Type: application/json
 Authorization: Token 42cd919a1c27ff546f2b38d90197662b994d5d1d
 

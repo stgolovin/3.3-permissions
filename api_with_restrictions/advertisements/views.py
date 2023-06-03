@@ -22,7 +22,5 @@ class AdvertisementViewSet(ModelViewSet):
         if self.action in ["create"]:
             return [IsAuthenticated()]
         if self.action in ["update", "partial_update", 'destroy']:
-            if self.request.user.username == 'admin':
-                return []
             return [IsOwnerOrReadOnly()]
         return []
